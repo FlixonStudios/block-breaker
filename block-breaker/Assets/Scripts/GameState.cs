@@ -10,6 +10,8 @@ public class GameState : MonoBehaviour
     [SerializeField] TMPro.TextMeshProUGUI levelComponent;
     [SerializeField] TMPro.TextMeshProUGUI timeComponent;
     [SerializeField] TMPro.TextMeshProUGUI titleComponent;
+    [SerializeField] GameObject skipButton;
+    [SerializeField] GameObject quitButton;
     [SerializeField] int currScore;
     [SerializeField] bool isAutoPlayEnabled;
     Scene currScene;
@@ -94,6 +96,8 @@ public class GameState : MonoBehaviour
             timeComponent.gameObject.SetActive(true);
             titleComponent.gameObject.SetActive(true);
             levelComponent.gameObject.SetActive(true);
+            skipButton.SetActive(true);
+            quitButton.SetActive(true);
         }
         else
         {
@@ -101,6 +105,8 @@ public class GameState : MonoBehaviour
             timeComponent.gameObject.SetActive(false);
             titleComponent.gameObject.SetActive(false);
             levelComponent.gameObject.SetActive(false);
+            skipButton.SetActive(false);
+            quitButton.SetActive(false);
         }
     }
     private void Awake()
